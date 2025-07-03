@@ -1,0 +1,231 @@
+/*Universal Styles */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;   
+}
+
+html {
+    font-size: 22px;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%
+    
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/*Banner Section*/
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 150px;
+    width: 100%; 
+}
+
+.banner h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav li a {
+    color: black;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 50px;  
+}
+
+@media (max-width: 1024px) {
+    .nav ul {
+        gap: 20px;
+        font-size: .8rem;
+        align-items: center;
+    }
+}
+
+
+
+/*Page Hero Section with background image and an overlapping sign-up box*/
+
+.page-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/planegray.jpg.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    padding: 20px 0;
+    
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    min-height: 430px;
+    width: 90%;
+    max-width: 430px;
+    margin: 80px auto 30px auto;
+    border-radius: 15px;
+    background-color: maroon;
+    justify-content: center;
+    align-items: center;
+    color: white;    
+} 
+
+.sign-up form {
+    margin-top: 20px;
+}
+
+/*Our Pilots Section*/
+ 
+.pilots-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: white;
+  background-color: maroon;
+}
+
+
+.pilots-images {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: auto;
+    padding: 20px 0;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    background-color: #48494B;
+} 
+
+.pilots-images img {
+  display: block;         /* ✅ Prevent inline spacing issues */
+  margin: 0 auto;         /* ✅ Ensures the image itself is centered */
+  max-width: 100%;        /* ✅ Makes sure images scale on small screens */
+  max-height: 100%;           /* originally height: auto ✅ Avoids distortion */
+  object-fit: cover;     /* Optional: trims overflow if image is cropped */
+  transition: transform 0.3s ease;  /* Smooth scaling on hover */
+}
+
+.pilots-images figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* ✅ Centers both image and caption */
+  text-align: center;    /* ✅ Centers caption text */
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pilots-images figcaption {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.pilots-images figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+.pilots-images img:hover {
+  transform: scale(1.03);
+}
+
+
+@media (max-width: 768px) {
+    .pilots-images {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/*Testimonials Section*/
+
+.testimonials-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    color: white;
+    background-color: maroon;
+}
+
+ 
+.testimonials-posts {
+    background-image: url("images/grayscalecloudsbackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: auto;
+    min-height: 300px;
+    padding: 30px;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .testimonials-posts {
+       flex-wrap: wrap;
+       flex-direction: column;
+       align-items: center;
+    }
+}
+
+/*Footer with contact information*/
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact li {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+
+/*responsive code */
+
+.pilots-images img,
+.testimonials-posts div {
+    width: 90%;
+} 
